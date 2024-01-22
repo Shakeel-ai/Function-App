@@ -7,8 +7,8 @@ from openai import OpenAI
 from dotenv import load_dotenv,find_dotenv
 
 load_dotenv(find_dotenv())
-weather_api_key = os.getenv("WEATHER_API_KEY")
-openai_api_key = os.getenv("OPENAI_API_KEY")
+weather_api_key = st.secrets["WEATHER_API_KEY"]
+openai_api_key = st.secrects["OPENAI_API_KEY"]
 client = OpenAI(api_key=openai_api_key)
 st.set_page_config(page_title="Shakeel")
 st.header("Function Calling Chatbot")
